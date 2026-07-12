@@ -90,7 +90,7 @@ RSS_FEEDS = [
     ("US Bureau of Labor Statistics", "https://www.bls.gov/feed/bls_latest.rss"),
 ]
  
-MAX_ITEMS_PER_FEED = 4     # lower than before since we now have ~50 feeds, not 4
+MAX_ITEMS_PER_FEED = 15     # lower than before since we now have ~50 feeds, not 4
 SUMMARY_MAX_CHARS = 300    # keep each snippet short so the prompt stays a reasonable size
  
  
