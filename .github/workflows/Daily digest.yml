@@ -2,9 +2,9 @@ name: Daily Finance Digest
 
 on:
   schedule:
-    # Runs at 11:00 UTC every day. GitHub Actions schedules always use UTC.
+    # Runs at 09:00 UTC every day. GitHub Actions schedules always use UTC.
     # Adjust the hour to match when you want the email to land in your inbox.
-    - cron: "0 11 * * *"
+    - cron: "0 09 * * *"
   workflow_dispatch:
     # Lets you click "Run workflow" in the Actions tab to test it on demand,
     # without waiting for the schedule.
