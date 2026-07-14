@@ -1,4 +1,4 @@
-name: manage subscriptions
+name: manage subscriptions 
 
 on:
   schedule:
