@@ -4,7 +4,7 @@ name: Run Daily Finance Digest
 on:
   schedule:
     # Runs daily at 6:00 AM and 1:00 PM (13:00) Central European Time (CET/CEST)
-    - cron: '0 6,13 * * *'
+    - cron: '0 6,22 * * *'
       timezone: 'Europe/Rome'
   workflow_dispatch:          # Enables the manual "Run workflow" button in GitHub
 
