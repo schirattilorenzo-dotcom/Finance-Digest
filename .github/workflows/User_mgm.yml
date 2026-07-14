@@ -3,7 +3,7 @@ name: manage subscriptions
 on:
   schedule:
     # Runs every hour
-    - cron: '*/10 * * * *' 
+    - cron: '*/11 * * * *' 
       timezone: 'Europe/Rome'
     
   workflow_dispatch:
