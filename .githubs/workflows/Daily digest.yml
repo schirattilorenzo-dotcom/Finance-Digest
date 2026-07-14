@@ -1,0 +1,33 @@
+
+name: Run Daily Finance Digest
+
+on:
+  schedule:
+    
+    - cron: '27 6,11,17,20,22 * * *'
+      timezone: 'Europe/Rome'
+  workflow_dispatch:          # Enables the manual "Run workflow" button in GitHub
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+
+
+      - name: Run Digest Script
+        env:
+          EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python daily_finance_digest.py
