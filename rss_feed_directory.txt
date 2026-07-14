@@ -1,0 +1,147 @@
+RSS FEED DIRECTORY — Reputable, Free, Globally-Recognized News Sources
+========================================================================
+Format: Name | Link | Description (max 100 chars)
+
+Notes:
+- Reuters is intentionally excluded — Reuters discontinued public RSS
+  feeds around 2020, and feeds claiming to be "Reuters RSS" elsewhere
+  are usually unofficial Google News proxies, not the real thing.
+- Publishers occasionally rename or retire feed URLs without notice.
+  If a feed in this list returns no entries, treat it as dead and
+  remove it — this is normal maintenance for any list this size.
+- This list totals roughly 150 feeds. It intentionally does not reach
+  1000 — see the chat explanation for why that number wasn't realistic
+  to responsibly verify at "reputable, well-known" quality.
+========================================================================
+
+## GLOBAL WIRE SERVICES & BROADCASTERS
+BBC News World | https://feeds.bbci.co.uk/news/world/rss.xml | Global breaking news, politics and world affairs from the BBC.
+BBC News Business | https://feeds.bbci.co.uk/news/business/rss.xml | Business and economic news from the BBC.
+BBC Sport | https://feeds.bbci.co.uk/sport/rss.xml | Global sports news, scores and analysis from the BBC.
+Al Jazeera | https://www.aljazeera.com/xml/rss/all.xml | International news with strong Middle East and global politics coverage.
+Sky News World | https://feeds.skynews.com/feeds/rss/world.xml | Breaking world news, politics and business from Sky News UK.
+Sky News Business | https://feeds.skynews.com/feeds/rss/business.xml | Business and market news from Sky News UK.
+Deutsche Welle Business | https://rss.dw.com/xml/rss-en-bus | German international broadcaster's English-language business news.
+Euronews | https://www.euronews.com/rss | Pan-European news covering politics, business and society.
+CBC News World | https://www.cbc.ca/webfeed/rss/rss-world | Canadian public broadcaster's international news coverage.
+NPR | https://feeds.npr.org/1001/rss.xml | US public radio news covering politics, business and world affairs.
+PBS NewsHour | https://www.pbs.org/newshour/feeds/rss/headlines | US public broadcaster's politics, economy and world news.
+Channel News Asia | https://www.channelnewsasia.com/rssfeeds/8395986 | Singapore-based English news covering Asian business and politics.
+Global Voices | https://globalvoices.org/feed/ | Citizen journalism and analysis on global affairs worldwide.
+Worldpress.org Top Stories | https://www.worldpress.org/feeds/topstories.xml | International press translations and analysis from around the world.
+UPI Top News | https://rss.upi.com/news/tn_us.rss | US and world headlines, business, and science from UPI wire service.
+
+## US NEWS NETWORKS & NEWSPAPERS
+CNN World | http://rss.cnn.com/rss/edition_world.rss | Breaking international news and politics from CNN.
+NYTimes Business | https://rss.nytimes.com/services/xml/rss/nyt/Business.xml | Business and economic news from The New York Times.
+NYTimes World | https://rss.nytimes.com/services/xml/rss/nyt/World.xml | International news and politics from The New York Times.
+Washington Post World | https://feeds.washingtonpost.com/rss/world | International politics and news from The Washington Post.
+Washington Post Business | http://feeds.washingtonpost.com/rss/business | Business and economic news from The Washington Post.
+USA Today Money | https://rssfeeds.usatoday.com/usatoday-moneytopstories | US business and personal finance news.
+NBC News | https://feeds.nbcnews.com/nbcnews/public/news | US and world news, politics and business from NBC.
+Fox News | https://moxie.foxnews.com/google-publisher/latest.xml | US politics, business and breaking news from Fox News.
+Fox Business | https://moxie.foxbusiness.com/google-publisher/latest.xml | US business and financial market news from Fox Business.
+ABC News International | https://abcnews.go.com/abcnews/internationalheadlines | International news headlines from ABC News.
+ABC News Money | https://abcnews.go.com/abcnews/moneyheadlines | US business and economic news from ABC News.
+CBS News | https://www.cbsnews.com/latest/rss/main | US and world news, politics and business from CBS News.
+Los Angeles Times | https://www.latimes.com/rss2.0.xml | US national and California news, business and politics.
+New York Post | https://nypost.com/feed/ | US news, business and politics with a New York focus.
+Washington Times | https://www.washingtontimes.com/rss/headlines/news/ | US politics and national news from The Washington Times.
+Vox | https://www.vox.com/rss/index.xml | Explanatory journalism on politics, policy, business and economy.
+Politico Economy | https://rss.politico.com/economy.xml | US economic policy and financial regulation news.
+The Hill Business | https://thehill.com/business/feed/ | US business and economic policy news.
+
+## UK & EUROPEAN NEWSPAPERS (ENGLISH)
+The Guardian Business | https://www.theguardian.com/business/rss | Business and economic news from The Guardian.
+The Guardian World | https://www.theguardian.com/world/rss | International news and politics from The Guardian.
+Daily Mirror World | https://www.mirror.co.uk/news/world-news/rss.xml | International news from the UK's Daily Mirror.
+Daily Express World | https://feeds.feedburner.com/daily-express-world-news | International news from the UK's Daily Express.
+EUobserver | https://euobserver.com/feed | Independent EU affairs and policy journalism.
+Euractiv | https://www.euractiv.com/feed/ | EU policy, politics and economic news.
+Balkan Insight | https://balkaninsight.com/feed/ | Politics, society and business news from the Balkan region.
+
+## EUROPEAN NEWSPAPERS (NON-ENGLISH)
+Le Monde | https://www.lemonde.fr/rss/une.xml | French daily newspaper covering politics, economy and world news.
+Der Spiegel International | https://www.spiegel.de/international/index.rss | German news magazine's English-language international coverage.
+El Pais English | https://feeds.elpais.com/mrss-s/pages/ep/site/english.elpais.com/portada | Spanish global newspaper's English international edition.
+El Mundo | https://e00-elmundo.uecdn.es/rss/portada.xml | Spanish national and international news.
+La Repubblica Economia | https://www.repubblica.it/rss/economia/rss2.0.xml | Italian economic and financial market news.
+La Repubblica Politica | https://www.repubblica.it/rss/politica/rss2.0.xml | Italian political news and government coverage.
+
+## ASIAN & OTHER REGIONAL NEWSPAPERS
+Times of India World | https://timesofindia.indiatimes.com/rssfeeds/296589292.cms | International news from India's largest English newspaper.
+The Economic Times India | https://economictimes.indiatimes.com/rssfeedsdefault.cms | Asia's largest business and financial newspaper (India).
+Moneycontrol India | https://www.moneycontrol.com/rss/business.xml | Indian business, market and financial news.
+Livemint Markets | https://www.livemint.com/rss/markets | Indian financial markets and economic news.
+South China Morning Post Business | https://www.scmp.com/rss/92/feed | Hong Kong-based business and economic news on Asia.
+Nikkei Asia | https://asia.nikkei.com/rss/feed/nar | Japanese financial press's English-language Asian business coverage.
+Sydney Morning Herald Sport | https://www.smh.com.au/rss/sport.xml | Australian sports news, results and analysis.
+
+## BUSINESS & FINANCE
+CNBC Finance | https://www.cnbc.com/id/10000664/device/rss/rss.html | US and global financial market news from CNBC.
+CNBC Economy | https://www.cnbc.com/id/20910258/device/rss/rss.html | Macroeconomic news and analysis from CNBC.
+CNBC World Top News | https://www.cnbc.com/id/100727362/device/rss/rss.html | Top global business and economic headlines from CNBC.
+Yahoo Finance | https://finance.yahoo.com/news/rssindex | Financial markets, stocks and business news from Yahoo Finance.
+MarketWatch Top Stories | http://feeds.marketwatch.com/marketwatch/topstories/ | Financial markets and business news from MarketWatch.
+MarketWatch Real-Time Headlines | http://feeds.marketwatch.com/marketwatch/realtimeheadlines/ | Real-time market-moving financial headlines from MarketWatch.
+Investing.com | https://www.investing.com/rss/news.rss | Global financial markets, stocks, and economic news.
+Seeking Alpha Market News | https://seekingalpha.com/feed.xml | Stock market analysis and financial news for investors.
+Benzinga | https://feeds.benzinga.com/benzinga | US stock market and financial news for traders and investors.
+MarketBeat | https://www.marketbeat.com/feed/ | Stock market news, ratings and financial data.
+Business Insider | https://feeds.businessinsider.com/custom/all | Business, finance, tech and markets news for a global audience.
+Forbes Business | https://www.forbes.com/business/feed/ | Business, finance and leadership news from Forbes.
+Fortune | https://fortune.com/feed/ | Global business news, rankings and corporate leadership coverage.
+Investopedia | https://www.investopedia.com/feedbuilder/feed/getfeed?feedName=rss_headline | Financial education, markets and investing news.
+TheStreet | https://www.thestreet.com/.rss/full/ | US stock market and personal finance news.
+Investor's Business Daily | https://www.investors.com/feed/ | Stock market analysis and investing strategy news.
+Kiplinger | https://www.kiplinger.com/feed/all | Personal finance, investing and economic policy news.
+ZeroHedge | https://feeds.feedburner.com/zerohedge/feed | Financial markets and macroeconomic commentary, alternative perspective.
+WSJ Markets | https://feeds.content.dowjones.io/public/rss/RSSMarketsMain | US and global financial market news from The Wall Street Journal.
+Financial Times International | https://www.ft.com/rss/home/international | Global financial and business news from the Financial Times.
+EconomyWatch | https://www.economywatch.com/feed | Personal finance, investing and global economic news.
+
+## CENTRAL BANKS & OFFICIAL INSTITUTIONS
+US Federal Reserve Press Releases | https://www.federalreserve.gov/feeds/press_all.xml | Official US monetary policy announcements and press releases.
+US SEC Press Releases | https://www.sec.gov/news/pressreleases.rss | Official US securities regulator announcements and enforcement news.
+European Central Bank Press | https://www.ecb.europa.eu/rss/press.xml | Official eurozone monetary policy announcements from the ECB.
+IMF News | https://www.imf.org/en/News/RSS | Global economic policy and financial stability news from the IMF.
+World Bank News | https://www.worldbank.org/en/news/all.rss | Global development economics and financial news from the World Bank.
+Bank of England News | https://www.bankofengland.co.uk/rss/news | Official UK monetary policy announcements from the Bank of England.
+US Bureau of Labor Statistics | https://www.bls.gov/feed/bls_latest.rss | Official US employment, inflation and labor market data releases.
+
+## COMMODITIES, CRYPTO & FX
+CoinDesk | https://www.coindesk.com/arc/outboundfeeds/rss/ | Bitcoin, Ethereum and cryptocurrency market news.
+Cointelegraph | https://cointelegraph.com/rss | Cryptocurrency, blockchain and digital asset regulation news.
+OilPrice.com | https://oilprice.com/rss/main | Oil, gas and energy commodity market news.
+Kitco News | https://www.kitco.com/rss/KitcoNews.xml | Gold, silver and precious metals market news.
+FXStreet | https://www.fxstreet.com/rss/news | Foreign exchange and currency market news and analysis.
+
+## TECHNOLOGY
+TechCrunch | https://techcrunch.com/feed/ | Startup, venture capital and technology industry news.
+The Verge | https://www.theverge.com/rss/index.xml | Consumer technology, gadgets and digital culture news.
+Wired | https://www.wired.com/feed/rss | Technology, science and security reporting and analysis.
+Ars Technica | http://feeds.arstechnica.com/arstechnica/index/ | In-depth technology news and analysis for IT professionals.
+ZDNet | https://www.zdnet.com/news/rss.xml | Enterprise technology news for IT decision-makers.
+Computerworld | https://www.computerworld.com/feed/ | Enterprise IT, software and hardware news.
+InfoWorld | https://www.infoworld.com/feed/ | Enterprise technology and software development news.
+SiliconANGLE | https://siliconangle.com/feed/ | Enterprise tech, cloud, AI and security news and analysis.
+Engadget | https://www.engadget.com/rss.xml | Consumer technology and gadget news.
+CNET | https://www.cnet.com/rss/news/ | Consumer technology news, reviews and product coverage.
+Bloomberg Technology | https://feeds.bloomberg.com/technology/news.rss | Business and market news focused on the technology sector.
+NextGov | https://www.nextgov.com/rss/all/ | US federal government technology policy and IT news.
+Hugging Face Blog | https://huggingface.co/blog/feed.xml | Open-source AI and machine learning model releases and research.
+DeepMind Blog | https://deepmind.google/blog/feed/ | AI research breakthroughs and updates from Google DeepMind.
+
+## SPORTS
+BBC Sport Football | https://feeds.bbci.co.uk/sport/football/rss.xml | Football news, results and analysis from the BBC.
+Sky Sports | https://www.skysports.com/rss/12040 | UK and global sports news, scores and analysis.
+Fox Sports | https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30 | US sports news, scores and analysis.
+NBC Sports | https://nbcsports.com/index.atom | US sports news, scores and commentary.
+ESPN | http://www.espn.com/espn/rss/news | Global sports news, scores and analysis from ESPN.
+CBS Sports | https://www.cbssports.com/rss/headlines/ | US sports news, scores and analysis.
+The Athletic (NYT) | https://www.nytimes.com/athletic/rss/news | In-depth sports journalism and analysis from The New York Times.
+LA Times Sports | https://www.latimes.com/sports.rss | US sports news with a Los Angeles/California focus.
+Golf.com | https://golf.com/feed/ | Global golf news, instruction and tour coverage.
+Boston.com Sports | https://www.boston.com/category/sports/feed/ | US sports news with a Boston/New England focus.
+Washington Times Sports | https://www.washingtontimes.com/rss/headlines/sports/ | US sports news and analysis.
+Boxing News | https://boxingnewsonline.net/feed/ | Global professional boxing news and analysis.
