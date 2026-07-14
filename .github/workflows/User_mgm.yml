@@ -1,0 +1,45 @@
+name: manage subscriptions
+
+on:
+  schedule:
+    # Runs at 12:00 UTC every day. GitHub Actions schedules always use UTC.
+    # Adjust the hour to match when you want the email to land in your inbox.
+    - cron: "0 01 * * *"
+    - cron: "0 02 * * *"
+    - cron: "0 03 * * *"
+    - cron: "0 04 * * *"
+    - cron: "0 05 * * *"
+    - cron: "0 06 * * *"
+    - cron: "0 07 * * *"
+    - cron: "0 08 * * *"
+    - cron: "0 09 * * *"
+    - cron: "0 10 * * *"
+    - cron: "0 11 * * *"
+    - cron: "0 12 * * *"
+    
+  workflow_dispatch:
+    # Lets you click "Run workflow" in the Actions tab to test it on demand,
+    # without waiting for the schedule.
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run subscription script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: python daily_finance_digest.py
