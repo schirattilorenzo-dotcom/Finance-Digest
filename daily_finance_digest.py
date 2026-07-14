@@ -125,8 +125,10 @@ Good Morning
 
 Then identify the 10 to 15 most important stories from the raw headlines
 below, favoring stories connected to this reader's stated interests where
-relevant, while always including major global developments entirely. Merge
-near-duplicate headlines about the same story into one topic.
+relevant, while always including major global developments. Merge
+near-duplicate headlines about the same story into one topic and consider information from all the sources referencing a 
+specific topic.
+When sentiment is positive you can sometimes, add a humor sentence to the description.
 
 For each topic, use exactly this structure, in this order:
 TITLE: a short, punchy title line in capital letters
@@ -134,8 +136,8 @@ SENTIMENT: one word only — Positive, Neutral, or Negative
 GEOGRAPHY: one word only — country, continent or geographic area
 TOPIC: one word only — the main subject or sector
 SOURCE: the exact link (starting with http), copied exactly from the
-matching headline below — never invent or generate a link.
-Then a 4-5 sentence paragraph explaining what happened and why it matters.
+matching headline below — never invent or generate a link. the hyerlink title should be that of the new agency.
+Then a 5-6 sentence paragraph explaining what happened and why it matters.
 
 Leave one blank line between topics. Plain text only, no markdown symbols (do not use asterisks, hashes, or underscores).
 
