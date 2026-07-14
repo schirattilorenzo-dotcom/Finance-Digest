@@ -121,7 +121,7 @@ def generate_personalized_digest(headlines_text: str, interests_summary: str) ->
 This reader's stated interests: {interests_summary}
 
 Start the email with exactly this line, on its own:
-Good Morning
+Your News Feed
 
 Then identify the 10 to 15 most important stories from the raw headlines
 below, favoring stories connected to this reader's stated interests where
