@@ -1,7 +1,7 @@
 """
 User Subscription Manager
 --------------------------
-Runs every 2 hours via GitHub Actions. Reads unread emails sent to
+Reads unread emails sent to
 infolsainews@gmail.com and manages per-user RSS feed subscriptions
 based on the email subject line (case-insensitive):
 
@@ -40,7 +40,7 @@ FEED_DIRECTORY_FILE = Path(__file__).resolve().parent / "rss_feed_directory.txt"
 USER_FILE_FIELDS = ["email", "feed_names", "interests_summary"]
 RECOGNIZED_SUBJECTS = ("new", "modify", "test", "remove")
 
-socket.setdefaulttimeout(10)  # don't let one slow feed stall a test-digest send
+socket.setdefaulttimeout(20)  # don't let one slow feed stall a test-digest send
 
 
 # ---------- Feed directory + user file I/O ----------
@@ -208,35 +208,54 @@ def process_inbox() -> None:
     all_feeds = load_feed_directory()
     users = load_users()
 
+    # --- Phase 1: Retrieve unread commands quickly and disconnect ---
     imap = imaplib.IMAP4_SSL("imap.gmail.com")
     imap.login(INBOX_ADDRESS, INBOX_APP_PASSWORD)
     imap.select("INBOX")
 
-    status, message_ids = imap.search(None, "UNSEEN")
+    status, message_ids = imap.uid('search', None, "UNSEEN")
     if status != "OK":
         print("IMAP search failed.")
         imap.logout()
         return
 
+    unread_emails = []
     for msg_id in message_ids[0].split():
-        msg_id_str = msg_id.decode(errors="ignore") if isinstance(msg_id, bytes) else str(msg_id)
+        status, msg_data = imap.uid('fetch', msg_id, "(BODY.PEEK[])")
+        if status != "OK" or not msg_data or msg_data[0] is None:
+            continue
+        
+        msg = email.message_from_bytes(msg_data[0][1])
+        subject = get_subject(msg)
+        if subject not in RECOGNIZED_SUBJECTS:
+            continue  # ignore unrecognized completely, leave as unread on server
+
+        sender = get_sender_address(msg)
+        body = get_email_body(msg)
+        unread_emails.append({
+            "uid": msg_id,
+            "subject": subject,
+            "sender": sender,
+            "body": body
+        })
+
+    imap.logout()  # Disconnect immediately so the connection doesn't time out
+
+    if not unread_emails:
+        print("No unread command emails found.")
+        return
+
+    # --- Phase 2: Process messages in-memory ---
+    success_uids = []
+    for mail in unread_emails:
+        uid = mail["uid"]
+        subject = mail["subject"]
+        sender = mail["sender"]
+        body = mail["body"]
+        
+        print(f"Processing '{subject}' from {sender}")
+        
         try:
-            # Use BODY.PEEK[] so fetching doesn't auto-mark the email as read
-            status, msg_data = imap.fetch(msg_id, "(BODY.PEEK[])")
-            if status != "OK":
-                print(f"Failed to fetch message ID {msg_id_str}")
-                continue
-                
-            msg = email.message_from_bytes(msg_data[0][1])
-
-            subject = get_subject(msg)
-            if subject not in RECOGNIZED_SUBJECTS:
-                continue  # leave unread — not a command this app understands
-
-            sender = get_sender_address(msg)
-            body = get_email_body(msg)
-            print(f"Processing '{subject}' from {sender}")
-
             if subject == "new":
                 if sender in users:
                     print(f"{sender} already exists — skipping (per spec).")
@@ -244,36 +263,49 @@ def process_inbox() -> None:
                     feeds, summary = select_feeds_and_summary(body, all_feeds)
                     users[sender] = {"email": sender, "feed_names": ";".join(feeds), "interests_summary": summary}
                     save_users(users)
+                success_uids.append(uid)
 
             elif subject == "modify":
                 feeds, summary = select_feeds_and_summary(body, all_feeds)
                 users[sender] = {"email": sender, "feed_names": ";".join(feeds), "interests_summary": summary}
                 save_users(users)
+                success_uids.append(uid)
 
             elif subject == "remove":
                 if sender in users:
                     users.pop(sender, None)
                     save_users(users)
+                success_uids.append(uid)
 
             elif subject == "test":
                 if sender not in users:
                     print(f"{sender} not found in user_file.csv — cannot run test digest.")
+                    # Acknowledge the mail so we do not retry a non-existent user forever
+                    success_uids.append(uid)
                 else:
                     send_test_digest(sender, users[sender], all_feeds)
-
-            # If execution reaches this point, processing was successful. Mark as read.
-            imap.store(msg_id, "+FLAGS", "\\Seen")
+                    success_uids.append(uid)
 
         except Exception as e:
-            # Catch failures (including Gemini API and network issues) to keep the script running
-            print(f"Error processing email ID {msg_id_str}: {e}")
-            try:
-                # Explicitly revert flag to unread to guarantee it can be reprocessed
-                imap.store(msg_id, "-FLAGS", "\\Seen")
-            except Exception as flag_err:
-                print(f"Failed to reset Seen flag for message {msg_id_str}: {flag_err}")
+            # If Gemini, SMTP, or parsing throws an error, the UID is not added to success_uids.
+            # This causes it to remain unread on the server so it can be reprocessed next run.
+            uid_str = uid.decode(errors='ignore') if isinstance(uid, bytes) else str(uid)
+            print(f"Error processing email UID {uid_str}: {e}")
 
-    imap.logout()
+    # --- Phase 3: Reconnect to acknowledge successful emails ---
+    if success_uids:
+        try:
+            imap = imaplib.IMAP4_SSL("imap.gmail.com")
+            imap.login(INBOX_ADDRESS, INBOX_APP_PASSWORD)
+            imap.select("INBOX")
+            
+            for uid in success_uids:
+                imap.uid('store', uid, "+FLAGS", "(\\Seen)")
+            
+            imap.logout()
+            print(f"Successfully marked {len(success_uids)} emails as read.")
+        except Exception as e:
+            print(f"Failed to update Seen flags on IMAP server: {e}")
 
 
 if __name__ == "__main__":
