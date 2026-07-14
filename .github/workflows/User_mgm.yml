@@ -21,6 +21,9 @@ on:
     # Lets you click "Run workflow" in the Actions tab to test it on demand,
     # without waiting for the schedule.
 
+permissions:
+  contents: write
+
 jobs:
   send-digest:
     runs-on: ubuntu-latest
@@ -43,3 +46,15 @@ jobs:
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
         run: python manage_subscriptions.py
+- name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add user_file.csv
+          # The "git diff" check ensures we only commit if there are actually changes to avoid errors
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-update user_file.csv from script run"
+            git push
+          else
+            echo "No changes to user_file.csv"
+          fi
