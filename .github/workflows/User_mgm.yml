@@ -46,6 +46,8 @@ jobs:
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
         run: python manage_subscriptions.py
+
+        
 - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
