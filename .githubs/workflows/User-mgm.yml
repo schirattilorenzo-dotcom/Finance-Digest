@@ -1,0 +1,50 @@
+name: manage subscriptions 
+
+on:
+  schedule:
+    # Runs every hour
+    - cron: '*/10 * * * *' 
+      timezone: 'Europe/Rome'
+    
+  workflow_dispatch:
+    # Lets you click "Run workflow" in the Actions tab to test it on demand,
+    # without waiting for the schedule.
+
+permissions:
+  contents: write
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run subscription script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: python manage_subscriptions.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add user_file.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-update user_file.csv from script run"
+            git push
+          else
+            echo "No changes to user_file.csv"
+          fi
+        
