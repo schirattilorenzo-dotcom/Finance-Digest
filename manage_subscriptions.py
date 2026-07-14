@@ -219,42 +219,60 @@ def process_inbox() -> None:
         return
 
     for msg_id in message_ids[0].split():
-        status, msg_data = imap.fetch(msg_id, "(RFC822)")
-        if status != "OK":
-            continue
-        msg = email.message_from_bytes(msg_data[0][1])
+        msg_id_str = msg_id.decode(errors="ignore") if isinstance(msg_id, bytes) else str(msg_id)
+        try:
+            # Use BODY.PEEK[] so fetching doesn't auto-mark the email as read
+            status, msg_data = imap.fetch(msg_id, "(BODY.PEEK[])")
+            if status != "OK":
+                print(f"Failed to fetch message ID {msg_id_str}")
+                continue
+                
+            msg = email.message_from_bytes(msg_data[0][1])
 
-        subject = get_subject(msg)
-        if subject not in RECOGNIZED_SUBJECTS:
-            continue  # leave unread — not a command this app understands
+            subject = get_subject(msg)
+            if subject not in RECOGNIZED_SUBJECTS:
+                continue  # leave unread — not a command this app understands
 
-        sender = get_sender_address(msg)
-        body = get_email_body(msg)
-        print(f"Processing '{subject}' from {sender}")
+            sender = get_sender_address(msg)
+            body = get_email_body(msg)
+            print(f"Processing '{subject}' from {sender}")
 
-        if subject == "new":
-            if sender in users:
-                print(f"{sender} already exists — skipping (per spec).")
-            else:
+            if subject == "new":
+                if sender in users:
+                    print(f"{sender} already exists — skipping (per spec).")
+                else:
+                    feeds, summary = select_feeds_and_summary(body, all_feeds)
+                    users[sender] = {"email": sender, "feed_names": ";".join(feeds), "interests_summary": summary}
+                    save_users(users)
+
+            elif subject == "modify":
                 feeds, summary = select_feeds_and_summary(body, all_feeds)
                 users[sender] = {"email": sender, "feed_names": ";".join(feeds), "interests_summary": summary}
+                save_users(users)
 
-        elif subject == "modify":
-            feeds, summary = select_feeds_and_summary(body, all_feeds)
-            users[sender] = {"email": sender, "feed_names": ";".join(feeds), "interests_summary": summary}
+            elif subject == "remove":
+                if sender in users:
+                    users.pop(sender, None)
+                    save_users(users)
 
-        elif subject == "remove":
-            users.pop(sender, None)
+            elif subject == "test":
+                if sender not in users:
+                    print(f"{sender} not found in user_file.csv — cannot run test digest.")
+                else:
+                    send_test_digest(sender, users[sender], all_feeds)
 
-        elif subject == "test":
-            if sender not in users:
-                print(f"{sender} not found in user_file.csv — cannot run test digest.")
-            else:
-                send_test_digest(sender, users[sender], all_feeds)
+            # If execution reaches this point, processing was successful. Mark as read.
+            imap.store(msg_id, "+FLAGS", "\\Seen")
 
-        imap.store(msg_id, "+FLAGS", "\\Seen")
+        except Exception as e:
+            # Catch failures (including Gemini API and network issues) to keep the script running
+            print(f"Error processing email ID {msg_id_str}: {e}")
+            try:
+                # Explicitly revert flag to unread to guarantee it can be reprocessed
+                imap.store(msg_id, "-FLAGS", "\\Seen")
+            except Exception as flag_err:
+                print(f"Failed to reset Seen flag for message {msg_id_str}: {flag_err}")
 
-    save_users(users)
     imap.logout()
 
 
