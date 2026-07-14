@@ -2,20 +2,10 @@ name: manage subscriptions
 
 on:
   schedule:
-    # Runs at 12:00 UTC every day. GitHub Actions schedules always use UTC.
-    # Adjust the hour to match when you want the email to land in your inbox.
-    - cron: "0 01 * * *"
-    - cron: "0 02 * * *"
-    - cron: "0 03 * * *"
-    - cron: "0 04 * * *"
-    - cron: "0 05 * * *"
-    - cron: "0 06 * * *"
-    - cron: "0 07 * * *"
-    - cron: "0 08 * * *"
-    - cron: "0 09 * * *"
-    - cron: "0 10 * * *"
-    - cron: "0 11 * * *"
-    - cron: "0 12 * * *"
+  schedule:
+    # Runs daily at 6:00 AM and 1:00 PM (13:00) Central European Time (CET/CEST)
+    - cron: '0 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 * * *'
+      timezone: 'Europe/Rome'
     
   workflow_dispatch:
     # Lets you click "Run workflow" in the Actions tab to test it on demand,
