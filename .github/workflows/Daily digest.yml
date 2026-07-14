@@ -1,13 +1,12 @@
-name: Daily Finance Digest
+
+name: Run Daily Finance Digest
 
 on:
   schedule:
-    # Runs at 12:00 UTC every day. GitHub Actions schedules always use UTC.
-    # Adjust the hour to match when you want the email to land in your inbox.
-    - cron: "0 12 * * *"
-  workflow_dispatch:
-    # Lets you click "Run workflow" in the Actions tab to test it on demand,
-    # without waiting for the schedule.
+    # Runs daily at 6:00 AM and 1:00 PM (13:00) Central European Time (CET/CEST)
+    - cron: '0 6,13 * * *'
+      timezone: 'Europe/Rome'
+  workflow_dispatch:          # Enables the manual "Run workflow" button in GitHub
 
 jobs:
   send-digest:
@@ -24,10 +23,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run digest script
+
+
+      - name: Run Digest Script
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
-          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python daily_finance_digest.py
+
