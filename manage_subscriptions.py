@@ -155,7 +155,7 @@ SENTIMENT: one word only — Positive, Neutral, or Negative
 GEOGRAPHY: one word only -country, continent or geographic area
 SOURCE: the exact link (starting with http), copied exactly from the
 matching headline below — never invent a link.
-Then a 4-5 sentence paragraph explaining what happened and why it matters.
+Then a 5-6 sentence paragraph explaining what happened and why it matters.
 
 Leave one blank line between topics. Plain text only, no markdown symbols.
 
