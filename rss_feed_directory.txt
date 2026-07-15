@@ -9,139 +9,259 @@ Notes:
 - Publishers occasionally rename or retire feed URLs without notice.
   If a feed in this list returns no entries, treat it as dead and
   remove it — this is normal maintenance for any list this size.
-- This list totals roughly 150 feeds. It intentionally does not reach
-  1000 — see the chat explanation for why that number wasn't realistic
-  to responsibly verify at "reputable, well-known" quality.
 ========================================================================
 
 ## GLOBAL WIRE SERVICES & BROADCASTERS
-BBC News World | https://feeds.bbci.co.uk/news/world/rss.xml | Global breaking news, politics and world affairs from the BBC.
-BBC News Business | https://feeds.bbci.co.uk/news/business/rss.xml | Business and economic news from the BBC.
-BBC Sport | https://feeds.bbci.co.uk/sport/rss.xml | Global sports news, scores and analysis from the BBC.
-Al Jazeera | https://www.aljazeera.com/xml/rss/all.xml | International news with strong Middle East and global politics coverage.
-Sky News World | https://feeds.skynews.com/feeds/rss/world.xml | Breaking world news, politics and business from Sky News UK.
-Sky News Business | https://feeds.skynews.com/feeds/rss/business.xml | Business and market news from Sky News UK.
-Deutsche Welle Business | https://rss.dw.com/xml/rss-en-bus | German international broadcaster's English-language business news.
-Euronews | https://www.euronews.com/rss | Pan-European news covering politics, business and society.
-CBC News World | https://www.cbc.ca/webfeed/rss/rss-world | Canadian public broadcaster's international news coverage.
-NPR | https://feeds.npr.org/1001/rss.xml | US public radio news covering politics, business and world affairs.
-PBS NewsHour | https://www.pbs.org/newshour/feeds/rss/headlines | US public broadcaster's politics, economy and world news.
-Channel News Asia | https://www.channelnewsasia.com/rssfeeds/8395986 | Singapore-based English news covering Asian business and politics.
-Global Voices | https://globalvoices.org/feed/ | Citizen journalism and analysis on global affairs worldwide.
-Worldpress.org Top Stories | https://www.worldpress.org/feeds/topstories.xml | International press translations and analysis from around the world.
-UPI Top News | https://rss.upi.com/news/tn_us.rss | US and world headlines, business, and science from UPI wire service.
+BBC News World | https://feeds.bbci.co.uk/news/world/rss.xml | London-based broadcaster covering global breaking news and international affairs.
+BBC News Business | https://feeds.bbci.co.uk/news/business/rss.xml | London-based network reporting on business, finance, and global economic trends.
+BBC Sport | https://feeds.bbci.co.uk/sport/rss.xml | London-based broadcaster delivering global sports news, scores, and athletic events.
+Al Jazeera | https://www.aljazeera.com/xml/rss/all.xml | Doha-based news network reporting on Middle Eastern politics and global current events.
+Sky News World | https://feeds.skynews.com/feeds/rss/world.xml | London-based broadcaster covering breaking world news, UK politics, and global markets.
+Sky News Business | https://feeds.skynews.com/feeds/rss/business.xml | London-based network reporting on global corporate developments and financial markets.
+Deutsche Welle Business | https://rss.dw.com/xml/rss-en-bus | Cologne-based outlet covering German industry, European trade, and international markets.
+Euronews | https://www.euronews.com/rss | Lyon-based outlet covering European politics, societal shifts, and continental business.
+CBC News World | https://www.cbc.ca/webfeed/rss/rss-world | Toronto-based public broadcaster covering Canadian news and international affairs.
+NPR | https://feeds.npr.org/1001/rss.xml | Washington-based network covering national politics, cultural trends, and world news.
+PBS NewsHour | https://www.pbs.org/newshour/feeds/rss/headlines | Washington-based program reporting on US federal policy, economics, and world news.
+Channel News Asia | https://www.channelnewsasia.com/rssfeeds/8395986 | Singapore-based channel reporting on Asian business, technology, and regional politics.
+Global Voices | https://globalvoices.org/feed/ | New York-based network reporting on citizen journalism and grassroots global affairs.
+Worldpress.org Top Stories | https://www.worldpress.org/feeds/topstories.xml | New York-based portal translating and analyzing international press and global issues.
+UPI Top News | https://rss.upi.com/news/tn_us.rss | Washington-based wire service covering US national news, business, and global events.
 
-## US NEWS NETWORKS & NEWSPAPERS
-CNN World | http://rss.cnn.com/rss/edition_world.rss | Breaking international news and politics from CNN.
-NYTimes Business | https://rss.nytimes.com/services/xml/rss/nyt/Business.xml | Business and economic news from The New York Times.
-NYTimes World | https://rss.nytimes.com/services/xml/rss/nyt/World.xml | International news and politics from The New York Times.
-Washington Post World | https://feeds.washingtonpost.com/rss/world | International politics and news from The Washington Post.
-Washington Post Business | http://feeds.washingtonpost.com/rss/business | Business and economic news from The Washington Post.
-USA Today Money | https://rssfeeds.usatoday.com/usatoday-moneytopstories | US business and personal finance news.
-NBC News | https://feeds.nbcnews.com/nbcnews/public/news | US and world news, politics and business from NBC.
-Fox News | https://moxie.foxnews.com/google-publisher/latest.xml | US politics, business and breaking news from Fox News.
-Fox Business | https://moxie.foxbusiness.com/google-publisher/latest.xml | US business and financial market news from Fox Business.
-ABC News International | https://abcnews.go.com/abcnews/internationalheadlines | International news headlines from ABC News.
-ABC News Money | https://abcnews.go.com/abcnews/moneyheadlines | US business and economic news from ABC News.
-CBS News | https://www.cbsnews.com/latest/rss/main | US and world news, politics and business from CBS News.
-Los Angeles Times | https://www.latimes.com/rss2.0.xml | US national and California news, business and politics.
-New York Post | https://nypost.com/feed/ | US news, business and politics with a New York focus.
-Washington Times | https://www.washingtontimes.com/rss/headlines/news/ | US politics and national news from The Washington Times.
-Vox | https://www.vox.com/rss/index.xml | Explanatory journalism on politics, policy, business and economy.
-Politico Economy | https://rss.politico.com/economy.xml | US economic policy and financial regulation news.
-The Hill Business | https://thehill.com/business/feed/ | US business and economic policy news.
+## US NATIONAL NEWS NETWORKS & NEWSPAPERS
+CNN World | http://rss.cnn.com/rss/edition_world.rss | Atlanta-based network reporting on international breaking news and political crises.
+NYTimes Business | https://rss.nytimes.com/services/xml/rss/nyt/Business.xml | New York-based paper reporting on global economic trends, Wall Street, and markets.
+NYTimes World | https://rss.nytimes.com/services/xml/rss/nyt/World.xml | New York-based paper reporting on international politics and global current events.
+Washington Post World | https://feeds.washingtonpost.com/rss/world | Washington-based daily covering global diplomatic ties, foreign policy, and world news.
+Washington Post Business | http://feeds.washingtonpost.com/rss/business | Washington-based newspaper covering US corporate policy and national economic trends.
+USA Today Money | https://rssfeeds.usatoday.com/usatoday-moneytopstories | McLean-based national paper covering US retail market news and personal finance.
+NBC News | https://feeds.nbcnews.com/nbcnews/public/news | New York-based broadcaster reporting on national politics and international events.
+Fox News | https://moxie.foxnews.com/google-publisher/latest.xml | New York-based network covering US conservative politics and national current events.
+Fox Business | https://moxie.foxbusiness.com/google-publisher/latest.xml | New York-based channel covering Wall Street, US corporate earnings, and trade policies.
+ABC News International | https://abcnews.go.com/abcnews/internationalheadlines | New York-based network covering global geopolitical conflicts and international news.
+ABC News Money | https://abcnews.go.com/abcnews/moneyheadlines | New York-based broadcaster reporting on US consumer markets and economic policies.
+CBS News | https://www.cbsnews.com/latest/rss/main | New York-based network covering national news, politics, and international events.
+Los Angeles Times | https://www.latimes.com/rss2.0.xml | Los Angeles-based daily covering West Coast regional policy, culture, and US news.
+New York Post | https://nypost.com/feed/ | New York-based daily covering local metro stories, national politics, and US business.
+Washington Times | https://www.washingtontimes.com/rss/headlines/news/ | Washington-based paper covering national political news and federal budget policies.
+Vox | https://www.vox.com/rss/index.xml | Washington-based site providing explanatory articles on US policy and global trends.
+Politico Economy | https://rss.politico.com/economy.xml | Arlington-based outlet covering federal monetary regulation and US economic policies.
+The Hill Business | https://thehill.com/business/feed/ | Washington-based paper reporting on US congressional policy and corporate lobbying.
 
-## UK & EUROPEAN NEWSPAPERS (ENGLISH)
-The Guardian Business | https://www.theguardian.com/business/rss | Business and economic news from The Guardian.
-The Guardian World | https://www.theguardian.com/world/rss | International news and politics from The Guardian.
-Daily Mirror World | https://www.mirror.co.uk/news/world-news/rss.xml | International news from the UK's Daily Mirror.
-Daily Express World | https://feeds.feedburner.com/daily-express-world-news | International news from the UK's Daily Express.
-EUobserver | https://euobserver.com/feed | Independent EU affairs and policy journalism.
-Euractiv | https://www.euractiv.com/feed/ | EU policy, politics and economic news.
-Balkan Insight | https://balkaninsight.com/feed/ | Politics, society and business news from the Balkan region.
+## US REGIONAL & STATE NEWS (LOCAL AGENCIES)
+Seattle Times | https://www.seattletimes.com/feed/ | Seattle-based newsroom reporting local Pacific Northwest politics and regional business.
+Miami Herald | https://www.miamiherald.com/news/state/florida/rss/ | Miami-based agency covering Florida state politics and Caribbean regional developments.
+Boston Globe | https://www.bostonglobe.com/rss/globe-headlines | Boston-based daily covering New England local government, sports, and regional news.
+Texas Tribune | https://www.texastribune.org/feeds/main/ | Austin-based non-profit covering Texas state policies and public education reform.
+San Francisco Chronicle | https://www.sfchronicle.com/bayarea/feed/ | San Francisco paper reporting on Bay Area local policies and California tech news.
+Denver Post | https://www.denverpost.com/feed/ | Denver-based paper covering Colorado Rocky Mountain regional news, politics, and sports.
+Atlanta Journal-Constitution | https://www.ajc.com/arc/outboundfeeds/rss/ | Atlanta-based daily covering Georgia state politics and Southern regional business.
+Dallas Morning News | https://www.dallasnews.com/arc/outboundfeeds/rss/ | Dallas-based newspaper covering North Texas regional business and state legislation.
+Star Tribune | https://www.startribune.com/rss/ | Minneapolis-based outlet covering Minnesota state policy and Midwest regional business.
+Chicago Sun-Times | https://chicago.suntimes.com/rss/index.xml | Chicago-based daily covering Illinois state politics, local metro news, and sports.
+Detroit Free Press | https://www.freep.com/arc/outboundfeeds/rss/ | Detroit-based daily covering Michigan regional manufacturing, politics, and local news.
+Oregonian | https://www.oregonlive.com/arc/outboundfeeds/rss/ | Portland-based agency covering Oregon state environment, politics, and local news.
+Philadelphia Inquirer | https://www.inquirer.com/arc/outboundfeeds/rss/ | Philadelphia paper covering Pennsylvania state policy, local metro news, and sports.
+Arizona Republic | https://www.azcentral.com/arc/outboundfeeds/rss/ | Phoenix-based daily covering Southwest desert water policies, border news, and politics.
+Charlotte Observer | https://www.charlotteobserver.com/news/local/rss/ | Charlotte-based paper covering North Carolina regional banking and local state news.
+Kansas City Star | https://www.kansascity.com/news/local/rss/ | Kansas City paper covering Missouri and Kansas regional politics and agricultural news.
 
-## EUROPEAN NEWSPAPERS (NON-ENGLISH)
-Le Monde | https://www.lemonde.fr/rss/une.xml | French daily newspaper covering politics, economy and world news.
-Der Spiegel International | https://www.spiegel.de/international/index.rss | German news magazine's English-language international coverage.
-El Pais English | https://feeds.elpais.com/mrss-s/pages/ep/site/english.elpais.com/portada | Spanish global newspaper's English international edition.
-El Mundo | https://e00-elmundo.uecdn.es/rss/portada.xml | Spanish national and international news.
-La Repubblica Economia | https://www.repubblica.it/rss/economia/rss2.0.xml | Italian economic and financial market news.
-La Repubblica Politica | https://www.repubblica.it/rss/politica/rss2.0.xml | Italian political news and government coverage.
+## CANADIAN NATIONAL & REGIONAL AGENCIES
+The Globe and Mail Business | https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/business/ | Toronto-based newspaper covering Canadian fiscal policy, enterprise, and trade.
+The Globe and Mail World | https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/world/ | Toronto-based daily covering Canadian foreign relations, global security, and world news.
+Toronto Star | https://www.thestar.com/search/resources/etc/rss/ | Toronto-based daily covering regional Ontario politics, local news, and Canadian affairs.
+Montreal Gazette | https://montrealgazette.com/feed | Montreal-based paper covering Quebec regional policy, local news, and Canadian trends.
+Vancouver Sun | https://vancouversun.com/feed | Vancouver-based daily covering British Columbia resources, local news, and Pacific trade.
+Calgary Herald | https://calgaryherald.com/feed | Calgary-based paper covering Alberta oil industry, local news, and Canadian economics.
+Ottawa Citizen | https://ottawacitizen.com/feed | Ottawa-based paper covering Canadian federal government policies and regional news.
 
-## ASIAN & OTHER REGIONAL NEWSPAPERS
-Times of India World | https://timesofindia.indiatimes.com/rssfeeds/296589292.cms | International news from India's largest English newspaper.
-The Economic Times India | https://economictimes.indiatimes.com/rssfeedsdefault.cms | Asia's largest business and financial newspaper (India).
-Moneycontrol India | https://www.moneycontrol.com/rss/business.xml | Indian business, market and financial news.
-Livemint Markets | https://www.livemint.com/rss/markets | Indian financial markets and economic news.
-South China Morning Post Business | https://www.scmp.com/rss/92/feed | Hong Kong-based business and economic news on Asia.
-Nikkei Asia | https://asia.nikkei.com/rss/feed/nar | Japanese financial press's English-language Asian business coverage.
-Sydney Morning Herald Sport | https://www.smh.com.au/rss/sport.xml | Australian sports news, results and analysis.
+## UK & IRISH NATIONAL NEWSPAPERS (ENGLISH)
+The Guardian Business | https://www.theguardian.com/business/rss | London-based newspaper covering UK corporate activity and global financial trends.
+The Guardian World | https://www.theguardian.com/world/rss | London-based daily reporting on international human rights, politics, and world news.
+Daily Mirror World | https://www.mirror.co.uk/news/world-news/rss.xml | London-based tabloid covering international celebrity news and global human stories.
+Daily Express World | https://feeds.feedburner.com/daily-express-world-news | London-based daily covering global security concerns, geopolitics, and world news.
+EUobserver | https://euobserver.com/feed | Brussels-based agency covering European Union political transparency and policy.
+Euractiv | https://www.euractiv.com/feed/ | Brussels-based news network reporting on EU legislation and continental policy.
+Balkan Insight | https://balkaninsight.com/feed/ | Sarajevo-based agency covering Southeast European politics and regional social issues.
+Irish Times | https://www.irishtimes.com/cmlink/news-1.1319192 | Dublin-based newspaper covering Republic of Ireland politics and European trade.
+
+## UK & IRISH REGIONAL NEWSPAPERS
+The Scotsman | https://www.scotsman.com/rss | Edinburgh-based daily reporting Scottish parliament policies and regional business.
+Belfast Telegraph | https://www.belfasttelegraph.co.uk/rss | Belfast-based paper covering Northern Irish political affairs and regional business.
+WalesOnline | https://www.walesonline.co.uk/?service=rss | Cardiff-based outlet covering Welsh political policy and regional community news.
+Irish Examiner | https://www.irishexaminer.com/feed/ | Cork-based newspaper covering southern Irish agricultural business and national news.
+Manchester Evening News | https://www.manchestereveningnews.co.uk/?service=rss | Manchester-based daily covering Northwest England regional policy, business, and sport.
+Liverpool Echo | https://www.liverpoolecho.co.uk/?service=rss | Liverpool-based daily covering Merseyside local government, community news, and sports.
+Yorkshire Post | https://www.yorkshirepost.co.uk/rss | Leeds-based daily covering Northern England agricultural industry and local politics.
+
+## WESTERN & NORTHERN EUROPE (NATIONAL & REGIONAL)
+Le Monde | https://www.lemonde.fr/rss/une.xml | Paris-based daily covering French political affairs and international current events.
+Der Spiegel International | https://www.spiegel.de/international/index.rss | Hamburg-based news magazine reporting on German policy and European security issues.
+El Pais English | https://feeds.elpais.com/mrss-s/pages/ep/site/english.elpais.com/portada | Madrid-based daily covering Spanish national politics and Latin American relations.
+El Mundo | https://e00-elmundo.uecdn.es/rss/portada.xml | Madrid-based national daily covering Spanish politics and European economic events.
+La Repubblica Economia | https://www.repubblica.it/rss/economia/rss2.0.xml | Rome-based paper reporting on Italian financial markets and European trade policies.
+La Repubblica Politica | https://www.repubblica.it/rss/politica/rss2.0.xml | Rome-based paper reporting on Italian parliament decisions and national government.
+La Stampa | https://www.lastampa.it/rss.xml | Turin-based publication covering northern Italian regional policies and national news.
+El Diario | https://www.eldiario.es/rss/ | Madrid-based independent outlet covering Spanish social policies and local politics.
+Svenska Dagbladet | https://www.svd.se/feed/articles.rss | Stockholm-based daily covering Swedish national politics and Nordic business trends.
+Aftenposten | https://www.aftenposten.no/rss | Oslo-based newspaper covering Norwegian state politics and Nordic energy markets.
+NRC Handelsblad | https://www.nrc.nl/rss/ | Amsterdam-based daily covering Dutch national politics and European economic trade.
+Der Standard | https://www.derstandard.at/rss | Vienna-based national daily covering Austrian politics and Central European business.
+Público | https://www.publico.pt/feed | Lisbon-based newspaper covering Portuguese national politics and European policies.
+L'Echo | https://www.lecho.be/rss | Brussels-based paper covering Belgian national financial markets and European trade.
+Tages-Anzeiger | https://www.tagesanzeiger.ch/rss.xml | Zurich-based paper covering Swiss banking regulations, local politics, and Europe.
+NZZ | https://www.nzz.ch/recent.rss | Zurich-based daily covering Swiss economic policy, global markets, and European news.
+Berlingske | https://www.berlingske.dk/rss | Copenhagen-based daily covering Danish national politics and Baltic regional trade.
+Helsingin Sanomat | https://www.hs.fi/rss/tuoreimmat.xml | Helsinki-based daily covering Finnish national policy and Arctic regional security.
+La Tribune | https://www.latribune.fr/rss.xml | Paris-based paper covering French domestic economic reforms and European businesses.
+Les Echos | https://www.lesechos.fr/rss | Paris-based financial daily covering French national industries and European markets.
+Handelsblatt | https://www.handelsblatt.com/rss | Dusseldorf-based paper covering German industrial output and eurozone monetary rules.
+Süddeutsche Zeitung | https://www.sueddeutsche.de/rss | Munich-based daily covering southern German regional politics and European affairs.
+Frankfurter Allgemeine | https://www.faz.net/rss/aktuell/ | Frankfurt-based paper covering German monetary policy, national news, and business.
+La Vanguardia | https://www.lavanguardia.com/mvc/feed/rss/home | Barcelona-based daily covering Catalan regional affairs and Spanish national politics.
+
+## EASTERN EUROPE & MEDITERRANEAN (NATIONAL & REGIONAL)
+Kathimerini | https://www.kathimerini.gr/feed/ | Athens-based paper reporting Greek national politics and Mediterranean trade routes.
+Rzeczpospolita | https://www.rp.pl/rss | Warsaw-based daily covering Polish national politics and Eastern European commerce.
+Kyiv Post | https://www.kyivpost.com/feed | Kyiv-based English daily covering Ukrainian defense policy and regional trade routes.
+Delfi Estonia | https://www.delfi.ee/rss | Tallinn-based portal reporting Baltic regional security, local news, and EU politics.
+LRT Lithuania | https://www.lrt.lt/en/rss | Vilnius-based broadcaster covering Lithuanian national news and Baltic border security.
+
+## ASIAN NATIONAL NEWSPAPERS
+Times of India World | https://timesofindia.indiatimes.com/rssfeeds/296589292.cms | Mumbai-based national daily covering South Asian politics and global news updates.
+The Economic Times India | https://economictimes.indiatimes.com/rssfeedsdefault.cms | Mumbai-based paper reporting on Indian stock markets, trade, and Asian economies.
+Moneycontrol India | https://www.moneycontrol.com/rss/business.xml | Mumbai-based financial portal covering Indian stock markets and regional corporate news.
+Livemint Markets | https://www.livemint.com/rss/markets | New Delhi-based paper covering Indian financial regulations and Asian market trends.
+South China Morning Post Business | https://www.scmp.com/rss/92/feed | Hong Kong-based daily covering Chinese state trade policies and East Asian business.
+Nikkei Asia | https://asia.nikkei.com/rss/feed/nar | Tokyo-based financial publication covering East Asian supply chains and regional tech.
+Sydney Morning Herald Sport | https://www.smh.com.au/rss/sport.xml | Sydney-based newsroom covering Australian rugby, cricket, and global sports news.
+
+## ASIA-PACIFIC REGIONAL NEWSPAPERS
+The Asahi Shimbun | https://www.asahi.com/rss/index.rdf | Tokyo-based daily covering Japanese national politics and East Asian trade policies.
+The Japan Times | https://www.japantimes.co.jp/feed/ | Tokyo-based English paper covering Japanese national security and regional Asian trade.
+The Straits Times | https://www.straitstimes.com/news/world/rss.xml | Singapore-based daily reporting Southeast Asian trade and regional current events.
+The Star Malaysia | https://www.thestar.com.my/rss/metro/ | Petaling Jaya-based daily covering Malaysian state politics and local ASEAN trade.
+Bangkok Post | https://www.bangkokpost.com/rss/data/most-recent.xml | Bangkok-based English daily covering Thai business, national politics, and regional news.
+Philippine Daily Inquirer | https://www.inquirer.net/fullfeed | Manila-based agency covering Philippine federal policies and domestic trade issues.
+Jakarta Post | https://www.thejakartapost.com/rss/paper | Jakarta-based English daily covering Indonesian business, trade, and Southeast Asia.
+Sydney Morning Herald | https://www.smh.com.au/rss/feed.xml | Sydney-based daily reporting Australian national politics and Oceania regional trade.
+The Age | https://www.theage.com.au/rss/feed.xml | Melbourne-based daily covering Victoria state government, sports, and Australian news.
+New Zealand Herald | https://www.nzherald.co.nz/arc/outboundfeeds/rss/ | Auckland-based daily covering New Zealand state policy and Pacific regional security.
+The West Australian | https://thewest.com.au/rss-feeds | Perth-based paper covering Western Australian mining, state politics, and local news.
+The Courier-Mail | https://www.couriermail.com.au/rss | Brisbane-based paper covering Queensland state policy, agricultural trade, and sports.
+South China Morning Post | https://www.scmp.com/rss/2/feed | Hong Kong-based paper covering Chinese geopolitical policy and East Asian current news.
+Mainichi Shimbun | https://mainichi.jp/rss/etc/mainichi-flash.rss | Tokyo-based national newspaper covering Japanese politics and East Asian social events.
+Yomiuri Shimbun | https://www.yomiuri.co.jp/stream/rss/ | Tokyo-based daily covering Japanese national policy, East Asian business, and culture.
+Chosun Ilbo | https://english.chosun.com/site/data/rss/rss.xml | Seoul-based daily covering Korean national security, East Asian trade, and technology.
+Yonhap News Agency | https://en.yna.co.kr/RSS/index | Seoul-based wire service reporting South Korean politics and Northeast Asian affairs.
+Central News Agency Taiwan | https://focustaiwan.tw/rss/index.aspx | Taipei-based English service covering Taiwanese technology and East Asian security.
+Taipei Times | http://www.taipeitimes.com/xml/index.rss | Taipei-based paper reporting Taiwan national policy and regional cross-strait security.
+Australian Financial Review | https://www.afr.com/rss | Sydney-based daily covering Australian financial markets, trade, and Asia-Pacific economics.
+Brisbane Times | https://www.brisbanetimes.com.au/rss/feed.xml | Brisbane-based outlet covering Queensland regional politics, local news, and Australian sports.
+
+## LATIN AMERICAN & CARIBBEAN REGIONAL NEWSPAPERS
+La Nación Argentina | https://servicios.lanacion.com.ar/herramientas/rss/origen=2 | Buenos Aires daily covering Argentine politics and South American trade policies.
+Folha de S.Paulo | https://feeds.folha.uol.com.br/emcima/rss091.xml | Sao Paulo paper covering Brazilian federal policy and South American regional trade.
+El Mercurio | https://www.elmercurio.com/rss/default.xml | Santiago-based paper covering Chilean national economic policy and Andean developments.
+El Tiempo | https://www.eltiempo.com/rss | Bogota-based daily covering Colombian national politics and Andean regional security.
+El Universal Mexico | https://www.eluniversal.com.mx/rss.xml | Mexico City daily covering Mexican federal politics and US-Mexico border state news.
+Jamaica Gleaner | https://jamaica-gleaner.com/feed | Kingston-based daily reporting Jamaican political policy and Caribbean regional trade.
+O Globo | https://oglobo.globo.com/rss.xml | Rio de Janeiro paper covering Brazilian national politics and South American affairs.
+Clarín | https://www.clarin.com/rss/lo-ultimo/ | Buenos Aires paper covering Argentine fiscal reforms and Southern Cone business news.
+El Comercio Peru | https://elcomercio.pe/feed/ | Lima-based daily covering Peruvian political policies and Andean regional business.
+El Universal Venezuela | https://www.eluniversal.com/rss/actualidad.xml | Caracas-based daily covering Venezuelan national news and regional Caribbean trade.
+La Tercera | https://www.latercera.com/arc/outboundfeeds/rss/ | Santiago-based paper covering Chilean social legislation and regional Southern Cone news.
+Prensa Libre | https://www.prensalibre.com/feed/ | Guatemala City paper covering Central American trade policies and national news.
+
+## MIDDLE EAST & AFRICAN REGIONAL AGENCIES
+Daily News Egypt | https://www.dailynewsegypt.com/feed/ | Cairo-based English daily covering Egyptian state policy and Middle East trade.
+Daily Trust Nigeria | https://dailytrust.com/feed/ | Abuja-based newsroom covering Nigerian politics and West African regional business.
+Mail & Guardian | https://mg.co.za/feed/ | Johannesburg-based paper covering South African politics and regional African affairs.
+The EastAfrican | https://www.theeastafrican.co.ke/service/rss/view/feed.xml | Nairobi-based weekly covering East African Community trade and regional integration.
+Haaretz English | https://www.haaretz.com/cmlink/1.4646700 | Tel Aviv daily covering Israeli politics, Middle Eastern security, and global issues.
+Times of Israel | https://www.timesofisrael.com/feed/ | Jerusalem-based daily covering Israeli current events and Middle Eastern security.
+The Guardian Nigeria | https://guardian.ng/feed/ | Lagos-based daily covering Nigerian economic reform and West African regional news.
+Vanguard Nigeria | https://www.vanguardngr.com/feed/ | Lagos-based paper reporting Nigerian national politics and West African social news.
+Arab News | https://www.arabnews.com/cat/1/rss.xml | Jeddah-based English daily covering Saudi Arabian politics and Middle Eastern trade.
+The National UAE | https://www.thenationalnews.com/arc/outboundfeeds/rss/ | Abu Dhabi-based paper covering Gulf cooperation policies and Middle East business.
+Daily Nation Kenya | https://nation.africa/service/rss/view/feed.xml | Nairobi-based daily covering East African regional news and Kenyan national politics.
+The Citizen Tanzania | https://www.thecitizen.co.tz/service/rss/view/feed.xml | Dar es Salaam paper covering Tanzanian trade, local business, and East African news.
+Daily Maverick | https://www.dailymaverick.co.za/feed/ | Cape Town paper reporting South African political policy and national fiscal reform.
+Morocco World News | https://www.moroccoworldnews.com/feed | Rabat-based English portal covering North African trade and Mediterranean diplomacy.
+The Jerusalem Post | https://www.jpost.com/rss/ | Jerusalem-based daily reporting Israeli politics and Middle East security affairs.
 
 ## BUSINESS & FINANCE
-CNBC Finance | https://www.cnbc.com/id/10000664/device/rss/rss.html | US and global financial market news from CNBC.
-CNBC Economy | https://www.cnbc.com/id/20910258/device/rss/rss.html | Macroeconomic news and analysis from CNBC.
-CNBC World Top News | https://www.cnbc.com/id/100727362/device/rss/rss.html | Top global business and economic headlines from CNBC.
-Yahoo Finance | https://finance.yahoo.com/news/rssindex | Financial markets, stocks and business news from Yahoo Finance.
-MarketWatch Top Stories | http://feeds.marketwatch.com/marketwatch/topstories/ | Financial markets and business news from MarketWatch.
-MarketWatch Real-Time Headlines | http://feeds.marketwatch.com/marketwatch/realtimeheadlines/ | Real-time market-moving financial headlines from MarketWatch.
-Investing.com | https://www.investing.com/rss/news.rss | Global financial markets, stocks, and economic news.
-Seeking Alpha Market News | https://seekingalpha.com/feed.xml | Stock market analysis and financial news for investors.
-Benzinga | https://feeds.benzinga.com/benzinga | US stock market and financial news for traders and investors.
-MarketBeat | https://www.marketbeat.com/feed/ | Stock market news, ratings and financial data.
-Business Insider | https://feeds.businessinsider.com/custom/all | Business, finance, tech and markets news for a global audience.
-Forbes Business | https://www.forbes.com/business/feed/ | Business, finance and leadership news from Forbes.
-Fortune | https://fortune.com/feed/ | Global business news, rankings and corporate leadership coverage.
-Investopedia | https://www.investopedia.com/feedbuilder/feed/getfeed?feedName=rss_headline | Financial education, markets and investing news.
-TheStreet | https://www.thestreet.com/.rss/full/ | US stock market and personal finance news.
-Investor's Business Daily | https://www.investors.com/feed/ | Stock market analysis and investing strategy news.
-Kiplinger | https://www.kiplinger.com/feed/all | Personal finance, investing and economic policy news.
-ZeroHedge | https://feeds.feedburner.com/zerohedge/feed | Financial markets and macroeconomic commentary, alternative perspective.
-WSJ Markets | https://feeds.content.dowjones.io/public/rss/RSSMarketsMain | US and global financial market news from The Wall Street Journal.
-Financial Times International | https://www.ft.com/rss/home/international | Global financial and business news from the Financial Times.
-EconomyWatch | https://www.economywatch.com/feed | Personal finance, investing and global economic news.
+CNBC Finance | https://www.cnbc.com/id/10000664/device/rss/rss.html | New York-based network reporting on global investment activity and market indices.
+CNBC Economy | https://www.cnbc.com/id/20910258/device/rss/rss.html | New York-based program covering macroeconomic updates and US federal trade policies.
+CNBC World Top News | https://www.cnbc.com/id/100727362/device/rss/rss.html | New York-based channel covering global business transactions and economic headlines.
+Yahoo Finance | https://finance.yahoo.com/news/rssindex | New York-based service reporting on global stock markets, portfolios, and trade.
+MarketWatch Top Stories | http://feeds.marketwatch.com/marketwatch/topstories/ | New York-based portal reporting on Wall Street indices and global financial news.
+MarketWatch Real-Time Headlines | http://feeds.marketwatch.com/marketwatch/realtimeheadlines/ | New York-based portal delivering instant stock market updates and global trade news.
+Investing.com | https://www.investing.com/rss/news.rss | Madrid-based network covering global equity markets, FX indices, and macroeconomic trends.
+Seeking Alpha Market News | https://seekingalpha.com/feed.xml | New York-based site providing stock analyses, investing strategies, and global news.
+Benzinga | https://feeds.benzinga.com/benzinga | Detroit-based portal reporting on US retail stock markets and day trading updates.
+MarketBeat | https://www.marketbeat.com/feed/ | Sioux Falls-based platform covering global stock ratings and dividend updates.
+Business Insider | https://feeds.businessinsider.com/custom/all | New York-based outlet reporting on global corporate culture, tech, and economic news.
+Forbes Business | https://www.forbes.com/business/feed/ | New York-based publisher covering global entrepreneurship, finance, and leadership.
+Fortune | https://fortune.com/feed/ | New York-based magazine reporting on multinational corporations and global business.
+Investopedia | https://www.investopedia.com/feedbuilder/feed/getfeed?feedName=rss_headline | New York-based site covering global financial terms, personal finance, and markets.
+TheStreet | https://www.thestreet.com/.rss/full/ | New York-based portal providing US retail investor analysis and stock market news.
+Investor's Business Daily | https://www.investors.com/feed/ | Los Angeles-based paper covering US equity trends and macroeconomic data reports.
+Kiplinger | https://www.kiplinger.com/feed/all | Washington-based portal covering US personal finance and tax policy developments.
+ZeroHedge | https://feeds.feedburner.com/zerohedge/feed | New York-based alternative blog covering global macroeconomics and financial markets.
+WSJ Markets | https://feeds.content.dowjones.io/public/rss/RSSMarketsMain | New York-based paper covering global capital flows, Wall Street, and fiscal policy.
+Financial Times International | https://www.ft.com/rss/home/international | London-based daily covering global corporate finance, M&A activity, and economics.
+EconomyWatch | https://www.economywatch.com/feed | Singapore-based portal covering international trade, investment, and global finance.
+
+## GLOBAL DIPLOMACY & POLICY INSTITUTES
+Foreign Affairs | https://www.foreignaffairs.com/rss.xml | New York-based journal covering global diplomacy, geopolitics, and US foreign policy.
+Council on Foreign Relations | https://www.cfr.org/rss.xml | New York-based think tank reporting on global governance, international relations, and security.
+Brookings Institution | https://www.brookings.edu/feed/ | Washington-based policy group covering US public administration and global economics.
+Carnegie Endowment | https://carnegieendowment.org/rss/ | Washington-based think tank covering global nuclear nonproliferation and international security.
+Chatham House | https://www.chathamhouse.org/rss.xml | London-based policy institute covering European diplomatic relations and global governance.
 
 ## CENTRAL BANKS & OFFICIAL INSTITUTIONS
-US Federal Reserve Press Releases | https://www.federalreserve.gov/feeds/press_all.xml | Official US monetary policy announcements and press releases.
-US SEC Press Releases | https://www.sec.gov/news/pressreleases.rss | Official US securities regulator announcements and enforcement news.
-European Central Bank Press | https://www.ecb.europa.eu/rss/press.xml | Official eurozone monetary policy announcements from the ECB.
-IMF News | https://www.imf.org/en/News/RSS | Global economic policy and financial stability news from the IMF.
-World Bank News | https://www.worldbank.org/en/news/all.rss | Global development economics and financial news from the World Bank.
-Bank of England News | https://www.bankofengland.co.uk/rss/news | Official UK monetary policy announcements from the Bank of England.
-US Bureau of Labor Statistics | https://www.bls.gov/feed/bls_latest.rss | Official US employment, inflation and labor market data releases.
+US Federal Reserve Press Releases | https://www.federalreserve.gov/feeds/press_all.xml | Washington-based institution covering US interest rates and monetary policy actions.
+US SEC Press Releases | https://www.sec.gov/news/pressreleases.rss | Washington-based regulator covering US securities law and financial market compliance.
+European Central Bank Press | https://www.ecb.europa.eu/rss/press.xml | Frankfurt-based bank covering eurozone interest rates and European monetary policy.
+IMF News | https://www.imf.org/en/News/RSS | Washington-based institution covering global debt relief, lending, and state fiscal health.
+World Bank News | https://www.worldbank.org/en/news/all.rss | Washington-based group covering global development projects and emerging market aid.
+Bank of England News | https://www.bankofengland.co.uk/rss/news | London-based institution covering UK interest rates and national monetary stability.
+US Bureau of Labor Statistics | https://www.bls.gov/feed/bls_latest.rss | Washington-based agency reporting US national inflation rates and employment data.
 
 ## COMMODITIES, CRYPTO & FX
-CoinDesk | https://www.coindesk.com/arc/outboundfeeds/rss/ | Bitcoin, Ethereum and cryptocurrency market news.
-Cointelegraph | https://cointelegraph.com/rss | Cryptocurrency, blockchain and digital asset regulation news.
-OilPrice.com | https://oilprice.com/rss/main | Oil, gas and energy commodity market news.
-Kitco News | https://www.kitco.com/rss/KitcoNews.xml | Gold, silver and precious metals market news.
-FXStreet | https://www.fxstreet.com/rss/news | Foreign exchange and currency market news and analysis.
+CoinDesk | https://www.coindesk.com/arc/outboundfeeds/rss/ | New York-based site covering global crypto asset regulation, Bitcoin, and markets.
+Cointelegraph | https://cointelegraph.com/rss | New York-based portal reporting on global blockchain tech and digital asset trends.
+OilPrice.com | https://oilprice.com/rss/main | London-based portal covering global crude oil markets, gas, and renewable energy.
+Kitco News | https://www.kitco.com/rss/KitcoNews.xml | Montreal-based agency reporting on global precious metals and gold market pricing.
+FXStreet | https://www.fxstreet.com/rss/news | Barcelona-based service covering global foreign exchange indices and macroeconomic events.
 
 ## TECHNOLOGY
-TechCrunch | https://techcrunch.com/feed/ | Startup, venture capital and technology industry news.
-The Verge | https://www.theverge.com/rss/index.xml | Consumer technology, gadgets and digital culture news.
-Wired | https://www.wired.com/feed/rss | Technology, science and security reporting and analysis.
-Ars Technica | http://feeds.arstechnica.com/arstechnica/index/ | In-depth technology news and analysis for IT professionals.
-ZDNet | https://www.zdnet.com/news/rss.xml | Enterprise technology news for IT decision-makers.
-Computerworld | https://www.computerworld.com/feed/ | Enterprise IT, software and hardware news.
-InfoWorld | https://www.infoworld.com/feed/ | Enterprise technology and software development news.
-SiliconANGLE | https://siliconangle.com/feed/ | Enterprise tech, cloud, AI and security news and analysis.
-Engadget | https://www.engadget.com/rss.xml | Consumer technology and gadget news.
-CNET | https://www.cnet.com/rss/news/ | Consumer technology news, reviews and product coverage.
-Bloomberg Technology | https://feeds.bloomberg.com/technology/news.rss | Business and market news focused on the technology sector.
-NextGov | https://www.nextgov.com/rss/all/ | US federal government technology policy and IT news.
-Hugging Face Blog | https://huggingface.co/blog/feed.xml | Open-source AI and machine learning model releases and research.
-DeepMind Blog | https://deepmind.google/blog/feed/ | AI research breakthroughs and updates from Google DeepMind.
+TechCrunch | https://techcrunch.com/feed/ | San Francisco-based site covering global startup funding and venture capital deals.
+The Verge | https://www.theverge.com/rss/index.xml | New York-based outlet covering global consumer tech trends, gadgets, and policies.
+Wired | https://www.wired.com/feed/rss | San Francisco-based daily covering global tech innovation, privacy, and science.
+Ars Technica | http://feeds.arstechnica.com/arstechnica/index/ | Boston-based portal reporting on global IT infrastructure and cyber security news.
+ZDNet | https://www.zdnet.com/news/rss.xml | New York-based site covering global enterprise software and corporate IT trends.
+Computerworld | https://www.computerworld.com/feed/ | Boston-based site covering enterprise hardware policies and global IT workspaces.
+InfoWorld | https://www.infoworld.com/feed/ | Boston-based portal reporting on global software development and cloud technologies.
+SiliconANGLE | https://siliconangle.com/feed/ | Boston-based site covering global cloud computing, artificial intelligence, and database tech.
+Engadget | https://www.engadget.com/rss.xml | New York-based site covering global gaming hardware, consumer gadgets, and reviews.
+CNET | https://www.cnet.com/rss/news/ | San Francisco-based portal covering global consumer tech testing and smart home reviews.
+Bloomberg Technology | https://feeds.bloomberg.com/technology/news.rss | New York-based agency covering global tech sector valuations and corporate mergers.
+NextGov | https://www.nextgov.com/rss/all/ | Washington-based portal covering US federal government cybersecurity and IT policies.
+Hugging Face Blog | https://huggingface.co/blog/feed.xml | New York-based community covering global open-source AI and machine learning code.
+DeepMind Blog | https://deepmind.google/blog/feed/ | London-based research group reporting on artificial intelligence and neural nets.
 
 ## SPORTS
-BBC Sport Football | https://feeds.bbci.co.uk/sport/football/rss.xml | Football news, results and analysis from the BBC.
-Sky Sports | https://www.skysports.com/rss/12040 | UK and global sports news, scores and analysis.
-Fox Sports | https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30 | US sports news, scores and analysis.
-NBC Sports | https://nbcsports.com/index.atom | US sports news, scores and commentary.
-ESPN | http://www.espn.com/espn/rss/news | Global sports news, scores and analysis from ESPN.
-CBS Sports | https://www.cbssports.com/rss/headlines/ | US sports news, scores and analysis.
-The Athletic (NYT) | https://www.nytimes.com/athletic/rss/news | In-depth sports journalism and analysis from The New York Times.
-LA Times Sports | https://www.latimes.com/sports.rss | US sports news with a Los Angeles/California focus.
-Golf.com | https://golf.com/feed/ | Global golf news, instruction and tour coverage.
-Boston.com Sports | https://www.boston.com/category/sports/feed/ | US sports news with a Boston/New England focus.
-Washington Times Sports | https://www.washingtontimes.com/rss/headlines/sports/ | US sports news and analysis.
-Boxing News | https://boxingnewsonline.net/feed/ | Global professional boxing news and analysis.
+BBC Sport Football | https://feeds.bbci.co.uk/sport/football/rss.xml | London-based service covering UK Premier League matches and global football tournaments.
+Sky Sports | https://www.skysports.com/rss/12040 | London-based broadcaster covering UK sports news, Premier League, and international golf.
+Fox Sports | https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30 | Los Angeles-based broadcaster covering US professional leagues and global sports events.
+NBC Sports | https://nbcsports.com/index.atom | Stamford-based channel covering US national sports events, Olympic news, and leagues.
+ESPN | http://www.espn.com/espn/rss/news | Bristol-based network covering global sports news, major leagues, and athlete trade deals.
+CBS Sports | https://www.cbssports.com/rss/headlines/ | New York-based portal covering US professional sports leagues and athletic statistics.
+The Athletic (NYT) | https://www.nytimes.com/athletic/rss/news | New York-based agency covering regional sports teams, player analysis, and UK football.
+LA Times Sports | https://www.latimes.com/sports.rss | Los Angeles-based paper covering West Coast regional sports and national major leagues.
+Golf.com | https://golf.com/feed/ | New York-based magazine covering PGA tour events and global golf instruction.
+Boston.com Sports | https://www.boston.com/category/sports/feed/ | Boston-based site covering regional New England sports teams and local athletic events.
+Washington Times Sports | https://www.washingtontimes.com/rss/headlines/sports/ | Washington-based paper covering East Coast US professional sports and college leagues.
+Boxing News | https://boxingnewsonline.net/feed/ | London-based publication covering global professional boxing, events, and world rankings.
