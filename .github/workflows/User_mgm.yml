@@ -2,7 +2,7 @@ name: manage subscriptions
 
 on:
   schedule:
-    # Runs every hour
+    # Runs every 16 mins
     - cron: '*/16 * * * *' 
       timezone: 'Europe/Rome'
     
