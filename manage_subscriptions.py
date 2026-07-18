@@ -128,7 +128,7 @@ AVAILABLE FEEDS:
  
 # ---------- Test-digest path (personalized, on-demand) ----------
  
-def fetch_headlines_for_feeds(feeds: list[dict], max_items_per_feed: int = 50) -> str:
+def fetch_headlines_for_feeds(feeds: list[dict], max_items_per_feed: int = 250) -> str:
     lines = []
     for feed in feeds:
         try:
