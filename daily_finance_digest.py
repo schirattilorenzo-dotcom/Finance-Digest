@@ -81,7 +81,7 @@ def load_users() -> list[dict]:
 
 # ---------- Headline Aggregator ----------
 
-def fetch_headlines_for_user(user_row: dict, all_feeds: list[dict], max_items: int = 300) -> str:
+def fetch_headlines_for_user(user_row: dict, all_feeds: list[dict], max_items: int = 50) -> str:
     """Fetch recent entries from the RSS feeds mapped to this user."""
     user_feed_names = {name.strip() for name in user_row.get("feed_names", "").split(";") if name.strip()}
     user_feeds = [f for f in all_feeds if f["name"] in user_feed_names]
