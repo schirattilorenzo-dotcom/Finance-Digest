@@ -95,7 +95,7 @@ then choose many feed names (up to 40).
 
 Respond with ONLY valid JSON, no markdown fences, no preamble, in this
 exact shape:
-{{"feeds": ["Exact Feed Name 1", "Exact Feed Name 2", "... 40 total ..."],
+{{"feeds": ["Exact Feed Name 1", "Exact Feed Name 2", "... up to 40 total ..."],
   "summary": "up to 500 characters, plain text, summarizing this user's
   main interests for internal reference"}}
 
