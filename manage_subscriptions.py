@@ -96,8 +96,8 @@ then choose many feed names (up to 40).
 Respond with ONLY valid JSON, no markdown fences, no preamble, in this
 exact shape:
 {{"feeds": ["Exact Feed Name 1", "Exact Feed Name 2", "... up to 40 total ..."],
-  "summary": "up to 500 characters, plain text, summarizing this user's
-  main interests for internal reference"}}
+  "summary": "up to 500 characters, describing in details the user interests in terms of topics, geographical areas, sources, arguments, tone of the user, 
+  language and other specific details of the request that might help generating a response"}}
 
 Every string in "feeds" must be copied EXACTLY (character-for-character)
 from the AVAILABLE FEEDS list below — never invent a name not listed there.
@@ -120,7 +120,7 @@ AVAILABLE FEEDS:
 
 # ---------- Test-digest path (personalized, on-demand) ----------
 
-def fetch_headlines_for_feeds(feeds: list[dict], max_items_per_feed: int = 15) -> str:
+def fetch_headlines_for_feeds(feeds: list[dict], max_items_per_feed: int = 35) -> str:
     lines = []
     for feed in feeds:
         try:
@@ -143,23 +143,23 @@ def summarize_for_user(headlines_text: str, interests_summary: str) -> str:
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     prompt = f"""You are writing a personalized daily news briefing email for one reader.
 
-This reader's stated interests: {interests_summary}
+This reader's stated interests, language and requirements: {interests_summary}
 
 Start the email with exactly this line, on its own:
-Good Morning
+Daily News
 
-Then identify the 10 to 15 most important stories from the raw headlines
-below, favoring stories connected to this reader's stated interests where
-relevant, while always including major global developments entirely. Merge
+Then identify from 5 to 15 most important stories from the raw headlines
+below, that fit the reader's stated interests as best as possible. Merge
 near-duplicate headlines about the same story into one topic.
 
 For each topic, use exactly this structure, in this order:
 TITLE: a short, punchy title line in capital letters
+DATE: Date when the news has been published
 SENTIMENT: one word only — Positive, Neutral, or Negative
 GEOGRAPHY: one word only -country, continent or geographic area
 SOURCE: the exact link (starting with http), copied exactly from the
 matching headline below — never invent a link.
-Then a 5-6 sentence paragraph explaining what happened and why it matters.
+Then a 5-6 sentence paragraph explaining what happened and why it matters in relation to the user's state interest
 
 Leave one blank line between topics. Plain text only, no markdown symbols.
 
