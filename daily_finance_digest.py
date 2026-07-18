@@ -118,29 +118,26 @@ def generate_personalized_digest(headlines_text: str, interests_summary: str) ->
     
     prompt = f"""You are writing a personalized news briefing email for one reader.
 
-This reader's stated interests: {interests_summary}
+This reader's stated interests, language and requirements: {interests_summary}
 
 Start the email with exactly this line, on its own:
-Your News Feed
+Daily News
 
-Then identify the 10 to 15 most important stories from the raw headlines
-below, favoring stories connected to this reader's stated interests where
-relevant, while always including major global developments. Merge
-near-duplicate headlines about the same story into one topic and consider information from all the sources referencing a 
-specific topic.
-When sentiment is positive you can sometimes, add a humor sentence to the description.
+Then identify from 5 to 15 most important stories from the raw headlines
+below, that fit the reader's stated interests as best as possible. Merge
+near-duplicate headlines about the same story into one topic.
 
 For each topic, use exactly this structure, in this order:
 TITLE: a short, punchy title line in capital letters
+DATE: Date when the news has been published
 SENTIMENT: one word only — Positive, Neutral, or Negative
-GEOGRAPHY: one word only — country, continent or geographic area
-TOPIC: one word only — the main subject or sector
+GEOGRAPHY: one word only -country, continent or geographic area
 SOURCE: the exact link (starting with http), copied exactly from the
-matching headline below — never invent or generate a link. the hyerlink title should be that of the new agency.
-Then a 5-6 sentence paragraph explaining what happened and why it matters.
+matching headline below — never invent a link.
+Then a 5-6 sentence paragraph explaining what happened and why it matters in relation to the user's state interest
+You can include humoristic comments in 1 or 2 news.
 
-Leave one blank line between topics. Plain text only, no markdown symbols (do not use asterisks, hashes, or underscores).
-
+Leave one blank line between topics. Plain text only, no markdown symbols.
 RAW HEADLINES:
 {headlines_text}
 """
