@@ -6,7 +6,7 @@ infolsainews@gmail.com and manages per-user RSS feed subscriptions
 based on the email subject line (case-insensitive):
 
   NEW    -> reads the email body as a description of interests, asks
-            Gemini to pick the 40 most relevant feeds from
+            Gemini to pick a number of feeds from the most relevant in
             rss_feed_directory.txt, and adds the user to user_file.csv.
             If the sender's address is already in user_file.csv, does
             nothing (per spec).
@@ -85,9 +85,13 @@ def select_feeds_and_summary(email_body: str, all_feeds: list[dict]) -> tuple[li
     feed_list_text = "\n".join(f"- {f['name']}: {f['description']}" for f in all_feeds)
 
     prompt = f"""A user emailed us describing their news interests. Based on their
-message, select the 40 feed names from the AVAILABLE FEEDS list below that
+message, select a number of feed names from the AVAILABLE FEEDS list below that
 best match their interests (topics, geography, stocks, industries,
-technologies, scientific fields, or political leanings they mention).
+technologies, scientific fields, or political leanings). You decide how many feed names could provide 
+relevant information for the user (between 10 and 40).
+When the message received is very detailed (for example, when it mentions a specific topic and country of interest and industry and is very long, 
+then choose a restricted number of relevant feed names (10 or 20), when the message is broad and short
+then choose many feed names (up to 40).
 
 Respond with ONLY valid JSON, no markdown fences, no preamble, in this
 exact shape:
