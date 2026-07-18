@@ -81,7 +81,7 @@ def load_users() -> list[dict]:
 
 # ---------- Headline Aggregator ----------
 
-def fetch_headlines_for_user(user_row: dict, all_feeds: list[dict], max_items: int = 15) -> str:
+def fetch_headlines_for_user(user_row: dict, all_feeds: list[dict], max_items: int = 40) -> str:
     """Fetch recent entries from the RSS feeds mapped to this user."""
     user_feed_names = {name.strip() for name in user_row.get("feed_names", "").split(";") if name.strip()}
     user_feeds = [f for f in all_feeds if f["name"] in user_feed_names]
@@ -120,12 +120,15 @@ def generate_personalized_digest(headlines_text: str, interests_summary: str) ->
 
 This reader's stated interests, language and requirements: {interests_summary}
 
+This reader's stated interests, topics to focus on, language and other requirements: {interests_summary}
+
 Start the email with exactly this line, on its own:
 Daily News
 
-Then identify from 5 to 15 most important stories from the raw headlines
-below, that fit the reader's stated interests as best as possible. Merge
-near-duplicate headlines about the same story into one topic.
+Then identify from 5 to 25 most important stories from the raw headlines
+below, that fit the reader's stated interests. 
+Only choose those headlines that are specifically relevant for the reader.
+Merge near-duplicate headlines about the same story into one topic.
 
 For each topic, use exactly this structure, in this order:
 TITLE: a short, punchy title line in capital letters
