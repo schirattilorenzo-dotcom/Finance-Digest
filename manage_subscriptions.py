@@ -97,7 +97,7 @@ Respond with ONLY valid JSON, no markdown fences, no preamble, in this
 exact shape:
 {{"feeds": ["Exact Feed Name 1", "Exact Feed Name 2", "... up to 40 total ..."],
   "summary": "up to 500 characters, describing in details the user interests in terms of topics, geographical areas, sources, arguments, tone of the user, 
-  language and other specific details of the request that might help generating a response"}}
+  language of the user and other specific requests that might help generating a personalized response"}}
 
 Every string in "feeds" must be copied EXACTLY (character-for-character)
 from the AVAILABLE FEEDS list below — never invent a name not listed there.
@@ -120,7 +120,7 @@ AVAILABLE FEEDS:
 
 # ---------- Test-digest path (personalized, on-demand) ----------
 
-def fetch_headlines_for_feeds(feeds: list[dict], max_items_per_feed: int = 35) -> str:
+def fetch_headlines_for_feeds(feeds: list[dict], max_items_per_feed: int = 50) -> str:
     lines = []
     for feed in feeds:
         try:
@@ -143,14 +143,15 @@ def summarize_for_user(headlines_text: str, interests_summary: str) -> str:
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     prompt = f"""You are writing a personalized daily news briefing email for one reader.
 
-This reader's stated interests, language and requirements: {interests_summary}
+This reader's stated interests, topics to focus on, language and other requirements: {interests_summary}
 
 Start the email with exactly this line, on its own:
 Daily News
 
-Then identify from 5 to 15 most important stories from the raw headlines
-below, that fit the reader's stated interests as best as possible. Merge
-near-duplicate headlines about the same story into one topic.
+Then identify from 5 to 25 most important stories from the raw headlines
+below, that fit the reader's stated interests. 
+Only choose those headlines that are specifally relevant for the reader.
+Merge near-duplicate headlines about the same story into one topic.
 
 For each topic, use exactly this structure, in this order:
 TITLE: a short, punchy title line in capital letters
