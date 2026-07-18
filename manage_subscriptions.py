@@ -150,7 +150,7 @@ Daily News
 
 Then identify from 5 to 25 most important stories from the raw headlines
 below, that fit the reader's stated interests. 
-Only choose those headlines that are specifally relevant for the reader.
+Only choose those headlines that are specifically relevant for the reader.
 Merge near-duplicate headlines about the same story into one topic.
 
 For each topic, use exactly this structure, in this order:
