@@ -96,14 +96,14 @@ def select_feeds_and_summary(email_body: str, all_feeds: list[dict]) -> tuple[li
 message, select a number of feed names from the AVAILABLE FEEDS list below that
 best match their interests (topics, geography, stocks, industries,
 technologies, scientific fields, or political leanings). You decide how many feed names could provide 
-relevant information for the user (between 10 and 40).
+relevant information for the user (between 10 and 20).
 When the message received is very detailed (for example, when it mentions a specific topic and country of interest and industry and is very long, 
-then choose a restricted number of relevant feed names (10 or 20), when the message is broad and short
-then choose many feed names (up to 40).
+then choose a restricted number of relevant feed names (10 or 15), when the message is broad and short
+then choose many feed names (up to 20).
  
 Respond with ONLY valid JSON, no markdown fences, no preamble, in this
 exact shape:
-{{"feeds": ["Exact Feed Name 1", "Exact Feed Name 2", "... up to 40 total ..."],
+{{"feeds": ["Exact Feed Name 1", "Exact Feed Name 2", "... up to 20 total ..."],
   "summary": "up to 500 characters, describing in details the user interests in terms of topics, geographical areas, sources, arguments, tone of the user, 
   language of the user and other specific requests that might help generating a personalized response"}}
  
@@ -121,14 +121,14 @@ AVAILABLE FEEDS:
     data = json.loads(raw)
  
     valid_names = {f["name"] for f in all_feeds}
-    chosen = [name for name in data.get("feeds", []) if name in valid_names][:40]
+    chosen = [name for name in data.get("feeds", []) if name in valid_names][:20]
     summary = data.get("summary", "").strip()[:500]
     return chosen, summary
  
  
 # ---------- Test-digest path (personalized, on-demand) ----------
  
-def fetch_headlines_for_feeds(feeds: list[dict], max_items_per_feed: int = 250) -> str:
+def fetch_headlines_for_feeds(feeds: list[dict], max_items_per_feed: int = 50) -> str:
     lines = []
     for feed in feeds:
         try:
